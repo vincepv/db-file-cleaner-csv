@@ -13,6 +13,7 @@ from components.firstname_clean import firstname_clean
 from components.email_clean import email_clean
 from components.zip_clean import clean_zip
 from components.gender_clean import gender_clean
+from constant.column_name import clean_country
 
 def clean_regular_file():
   uploaded_file = st.file_uploader("Choisissez un fichier CSV", type="csv", key="clean_regular_file")
@@ -40,6 +41,7 @@ def clean_regular_file():
           df = gender_clean(df)
           df = clean_zip(df)
           df = email_clean(df)
+          df = clean_country(df)
 
           split_file(df)
         

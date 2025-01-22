@@ -16,11 +16,11 @@ def gender_clean(df):
 
   dic_male = {
     'Monsieur': '2',
-    'M': '2',
-    'm': '2',
     'Homme': '2',
     'homme': '2',
     'H': '2',
+    'M': '2',
+    'm': '2',
   }
 
   df[SEXE] = df[SEXE].replace(dic_female, regex=True)

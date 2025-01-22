@@ -1,4 +1,4 @@
-from constant.column_name import CATEGORIE, PRENOM, NOM, PAYS, ADRESSE, CP, VILLE, EMAIL, SEXE, DATE_NAISSANCE, MOT_CLE
+from constant.column_name import CATEGORIE, PRENOM, NOM, PAYS, ADRESSE, CP, VILLE, EMAIL, MOBILE, SEXE, DATE_NAISSANCE, MOT_CLE
 
 def rename_column(df):
     """
@@ -23,16 +23,24 @@ def rename_column(df):
         'firstname': PRENOM,
         'prénom': PRENOM,
         'prenom': PRENOM,
+        'PRENOM': PRENOM,
+        'Prénom': PRENOM,
+        'Nom': NOM,
         'nom': NOM,
         'NOM': NOM,
         'Last Name': NOM,
         'last name': NOM,
         'lastname': NOM,
         'Country': PAYS,
+        'country': PAYS,
+        'Pays': PAYS,
+        'pays': PAYS,
+        'PAYS': PAYS,
         'Street Address': ADRESSE,
         'adresse': ADRESSE,
         'Adr': ADRESSE,
         'cp': CP,
+        'CP': CP,
         'code postal': CP,
         'CODE POSTAL': CP,
         'Zip': CP,
@@ -44,10 +52,22 @@ def rename_column(df):
         'mail': EMAIL,
         'MAIL': EMAIL,
         'Gender': SEXE,
+        'gender': SEXE,
+        'SEXE': SEXE,
+        'Sexe': SEXE,
+        'sexe': SEXE,
         'Date of Birth': DATE_NAISSANCE,
+        'DATE DE NAISSANCE': DATE_NAISSANCE,
         'date': DATE_NAISSANCE,
         'Date': DATE_NAISSANCE,
         'Keywords': MOT_CLE,
+        'MOBILE': MOBILE,
+        'mobile': MOBILE,
+        'Phone': MOBILE,
+        'phone': MOBILE,
+        'telephone': MOBILE,
+        'Telephone': MOBILE,
+        'tel': MOBILE,
     }
 
     
