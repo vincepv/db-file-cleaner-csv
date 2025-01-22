@@ -19,7 +19,7 @@ You can use GUI Anaconda Navigator to create env
 2. Run the app
 
    ```
-   $ streamlit run streamlit_app.py
+   $ streamlit run app.py
    ```
 
 ### How to deploy

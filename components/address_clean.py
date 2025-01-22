@@ -14,22 +14,27 @@ def address_clean(df):
   pd.DataFrame: Le DataFrame avec deux nouvelles colonnes 'Numéro Rue' et 'Nom Rue'.
   """
 
-  dic_zip_code = {
-    '\.0$': '', 
-    'nan': '',
-  }
+  if ADRESSE not in df.columns:
+    return df
 
-  df[CP] = df[CP].astype(str).replace(dic_zip_code, regex=True)
 
-  # prepare data
-  df[ADRESSE] = df[ADRESSE].fillna('')
-  df[ADRESSE] = df[ADRESSE].str.replace(',','')
-  df[ADRESSE] = df[ADRESSE].str.strip()
+  if ADRESSE in df.columns:
+    dic_zip_code = {
+      '\.0$': '', 
+      'nan': '',
+    }
 
-  # extract street number and street name
-  # dans ADRESSE on extrait ce qui commence par des lettres, chiffres et caractères speciaux et on met dans 'Numéro Rue'
-  df['Numéro Rue'] = df[ADRESSE].str.extract(r'^(\S+)')
-  df['Nom Rue'] = df[ADRESSE].str.extract(r'(?<=\s)([\w\s]+)')
-  
-  df.drop(ADRESSE, axis=1, inplace=True)
-  return df
+    df[CP] = df[CP].astype(str).replace(dic_zip_code, regex=True)
+
+    # prepare data
+    df[ADRESSE] = df[ADRESSE].fillna('')
+    df[ADRESSE] = df[ADRESSE].str.replace(',','')
+    df[ADRESSE] = df[ADRESSE].str.strip()
+
+    # extract street number and street name
+    # dans ADRESSE on extrait ce qui commence par des lettres, chiffres et caractères speciaux et on met dans 'Numéro Rue'
+    df['Numéro Rue'] = df[ADRESSE].str.extract(r'^(\S+)')
+    df['Nom Rue'] = df[ADRESSE].str.extract(r'(?<=\s)([\w\s]+)')
+    
+    df.drop(ADRESSE, axis=1, inplace=True)
+    return df
