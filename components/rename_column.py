@@ -14,6 +14,10 @@ def rename_column(df):
 
     # Dictionnaire de renommage
     column_to_rename = {
+        'category': CATEGORIE,
+        'catégorie': CATEGORIE,
+        'Categorie': CATEGORIE,
+        'Catégorie': CATEGORIE,
         'Category': CATEGORIE,
         'First Name': PRENOM,
         'first name': PRENOM,
@@ -51,6 +55,8 @@ def rename_column(df):
         'email': EMAIL,
         'mail': EMAIL,
         'MAIL': EMAIL,
+        'genre': SEXE,
+        'Genre': SEXE,
         'Gender': SEXE,
         'gender': SEXE,
         'SEXE': SEXE,
