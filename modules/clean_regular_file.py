@@ -32,16 +32,21 @@ def clean_regular_file():
           df = rename_column(df)
 
           # business logic
-          df = date_clean(df)
-          df = mobile_clean(df)
-          df = clean_country(df)
-          df = category_create(df)
-          df = address_clean(df)
           df = firstname_clean(df)
+          df = date_clean(df)
           df = gender_clean(df)
-          df = clean_zip(df)
-          df = email_clean(df)
+          
+          df = address_clean(df)
           df = clean_country(df)
+          df = clean_country(df)
+          
+          df = mobile_clean(df)
+          df = email_clean(df)
+          
+          df = category_create(df)
+          df = clean_zip(df)
+
+          # add keywords : add LE2024, BV 1
 
           split_file(df)
         

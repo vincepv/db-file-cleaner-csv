@@ -1,7 +1,9 @@
 # CONSTANTES COLUMN NAME
+# muse be inside CSV generated
 
 PRENOM = 'Prénom'
 NOM = 'Nom'
+NOM_NAISSANCE = 'Nom de naissance'
 DATE_NAISSANCE = 'Date de naissance'
 SEXE = 'Sexe'
 
