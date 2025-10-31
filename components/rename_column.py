@@ -100,6 +100,16 @@ def rename_column(df):
         'DATE NAISSANCE': DATE_NAISSANCE,
         
         'Keywords': MOT_CLE,
+        'keywords': MOT_CLE,
+        'Mots clés': MOT_CLE,
+        'mots clés': MOT_CLE,
+        'Mots cles': MOT_CLE,
+        'mots cles': MOT_CLE,
+        'MOT CLE': MOT_CLE,
+        'mot cle': MOT_CLE,
+        'Mot clé': MOT_CLE,
+        'mot clé': MOT_CLE,
+        
         
         'MOBILE': MOBILE,
         'mobile': MOBILE,

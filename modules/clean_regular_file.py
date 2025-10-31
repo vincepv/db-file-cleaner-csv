@@ -14,6 +14,7 @@ from components.email_clean import email_clean
 from components.zip_clean import clean_zip
 from components.gender_clean import gender_clean
 from components.clean_country import clean_country
+from components.keyword_bv import keyword_bv
 
 def clean_regular_file():
   uploaded_file = st.file_uploader("Choisissez un fichier CSV", type="csv", key="clean_regular_file")
@@ -59,6 +60,8 @@ def clean_regular_file():
           
           df = category_create(df)
           df = clean_zip(df)
+
+          df = keyword_bv(df)
 
           # preview of the cleaned file
           # for dev only
