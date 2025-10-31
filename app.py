@@ -1,6 +1,5 @@
 import streamlit as st
 
-from modules.migration import migration
 from modules.clean_regular_file import clean_regular_file
 from modules.athena_clean import athena_clean
 
