@@ -62,12 +62,10 @@ def clean_regular_file():
           df = clean_zip(df)
 
           df = keyword_bv(df)
-
+          
           # preview of the cleaned file
           # for dev only
           st.dataframe(df.head())
-
-          # add keywords : add LE2024, BV 1
 
           split_file(df)
         
