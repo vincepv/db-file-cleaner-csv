@@ -11,7 +11,7 @@ st.write(
 
 st.divider()
 st.header("Script nettoyage CSV")
-st.write ("Le CSV doit contenir les colonnes suivantes : Prénom , Nom ,Date de naissance ,Mobile ,Email,Adresse,Code postal")
+st.write ("Le CSV doit contenir les colonnes suivantes : prenom , nom usage, nom naissance  ,date de naissance ,mobile ,email,Adresse,code postal")
 clean_regular_file()
 
 

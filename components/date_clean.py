@@ -13,10 +13,17 @@ def date_clean (df):
   }
   df[DATE_NAISSANCE] = df[DATE_NAISSANCE].replace(clean_value,regex=True)
 
-  # convert in: yyyy-mm-dd
+   
+  
   df[DATE_NAISSANCE] = pd.to_datetime(
     df[DATE_NAISSANCE],
-    errors='ignore',
-    dayfirst=True,)
+    dayfirst=True,           # important pour formats français
+    errors='coerce',         # les valeurs invalides deviennent NaT (non bloquant)
+    )
+
+  # 🧩 Conversion finale en format ISO (YYYY-MM-DD)
+  df[DATE_NAISSANCE] = df[DATE_NAISSANCE].dt.strftime('%Y-%m-%d')
+
+  df[DATE_NAISSANCE] = df[DATE_NAISSANCE].fillna('')
 
   return df

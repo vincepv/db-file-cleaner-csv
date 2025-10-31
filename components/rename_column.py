@@ -34,7 +34,7 @@ def rename_column(df):
         'PRENOM': PRENOM,
         'Prénom': PRENOM,
 
-        'Nom': NOM,
+        
         'Nom Usage': NOM,
         'nom usage': NOM,
         'NOM USAGE': NOM,
@@ -45,6 +45,9 @@ def rename_column(df):
         'nom de naissance': NOM_NAISSANCE,
         'Nom de naissance': NOM_NAISSANCE,
         'NOM DE NAISSANCE': NOM_NAISSANCE,
+        'nom naissance': NOM_NAISSANCE,
+        'Nom Naissance': NOM_NAISSANCE,
+        'NOM NAISSANCE': NOM_NAISSANCE,
         'Birth Name': NOM_NAISSANCE,
         'birth name': NOM_NAISSANCE,
         'Birthname': NOM_NAISSANCE,
@@ -73,6 +76,11 @@ def rename_column(df):
         'mail': EMAIL,
         'MAIL': EMAIL,
         
+        'civilité': SEXE,
+        'Civilité': SEXE,
+        'CIVILITÉ': SEXE,
+        'CIVILITE': SEXE,
+        'civilite': SEXE,
         'genre': SEXE,
         'Genre': SEXE,
         'Gender': SEXE,
@@ -87,6 +95,9 @@ def rename_column(df):
         'DATE DE NAISSANCE': DATE_NAISSANCE,
         'date': DATE_NAISSANCE,
         'Date': DATE_NAISSANCE,
+        'Date naissance': DATE_NAISSANCE,
+        'Date Naissance': DATE_NAISSANCE,
+        'DATE NAISSANCE': DATE_NAISSANCE,
         
         'Keywords': MOT_CLE,
         

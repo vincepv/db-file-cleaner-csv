@@ -8,6 +8,9 @@ def gender_clean(df):
   df[SEXE] = df[SEXE].astype(str)
 
   dic_female = {
+    'Mme': '1',
+    'Mlle': '1',
+    'Madame': '1',
     'Femme': '1',
     'femme': '1',
     'F': '1',
@@ -15,6 +18,8 @@ def gender_clean(df):
   }
 
   dic_male = {
+    'Mr': '2',
+    'M.': '2',
     'Monsieur': '2',
     'Homme': '2',
     'homme': '2',
