@@ -1,4 +1,4 @@
-from constant.column_name import CATEGORIE, PRENOM, NOM, NOM_NAISSANCE,PAYS, ADRESSE, CP, VILLE, EMAIL, MOBILE, SEXE, DATE_NAISSANCE, MOT_CLE
+from constant.column_name import CATEGORIE, PRENOM, NOM, NOM_NAISSANCE,PAYS, ADRESSE, CP, VILLE, EMAIL, MOBILE, SEXE, DATE_NAISSANCE, MOT_CLE, NOTE
 
 def rename_column(df):
     """
@@ -118,6 +118,13 @@ def rename_column(df):
         'telephone': MOBILE,
         'Telephone': MOBILE,
         'tel': MOBILE,
+
+        'note' : NOTE,
+        'notes' : NOTE,
+        'NOTE' : NOTE,
+        'NOTES' : NOTE,
+        'Note' : NOTE,
+        'Notes' : NOTE
     }
 
     

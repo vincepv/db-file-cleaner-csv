@@ -9,6 +9,8 @@ SEXE = 'Sexe'
 
 CATEGORIE = 'Categorie'
 
+NOTE = 'Note'
+
 MOT_CLE = 'Mot clé'
 MOBILE = 'Mobile'
 EMAIL = 'Email'

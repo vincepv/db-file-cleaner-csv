@@ -15,6 +15,7 @@ from components.zip_clean import clean_zip
 from components.gender_clean import gender_clean
 from components.clean_country import clean_country
 from components.keyword_bv import keyword_bv
+from components.note_clean import clean_note
 
 def clean_regular_file():
   uploaded_file = st.file_uploader("Choisissez un fichier CSV", type="csv", key="clean_regular_file")
@@ -33,11 +34,6 @@ def clean_regular_file():
         st.error("Le fichier est vide. Veuillez télécharger un fichier CSV valide.")
         return
       
-      # preview of the file
-      st.write("Voici un aperçu du fichier chargé :")
-      st.dataframe(df.head())
-      
-
       # Main business logic
       
       if st.button("Nettoyer le fichier"):
@@ -62,9 +58,10 @@ def clean_regular_file():
           df = clean_zip(df)
 
           df = keyword_bv(df)
+          df = clean_note(df)
           
           # preview of the cleaned file
-          # for dev only
+          st.write("Voici un aperçu du fichier traité :")
           st.dataframe(df.head())
 
           split_file(df)
